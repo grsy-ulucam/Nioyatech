@@ -2,12 +2,14 @@ package dataClass;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
-import stepdefinitions.ProjectSteps;
+import stepdefinitions.AllApiSteps;
 import utilities.JsonUtils;
+
 import java.util.HashMap;
 
-public class ProjectData {
-    public HashMap<String, Object> reqTestDataBody(){
+public class ApiProjectData {
+
+    public HashMap<String, Object> reqTestDataBodyForProjects(){
 
         String json = "{\n" +
                 "  \"data\": {\n" +
@@ -43,11 +45,9 @@ public class ProjectData {
                 "}";
 
         Gson gson = new Gson();
-
         JsonObject jsonObject = gson.fromJson(json, JsonObject.class);
 
-        jsonObject.getAsJsonObject("data").addProperty("name", ProjectSteps.projectNames);
-
+        jsonObject.getAsJsonObject("data").addProperty("name", AllApiSteps.projectName);
         String modifiedJson = gson.toJson(jsonObject);
 
 

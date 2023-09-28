@@ -3,11 +3,12 @@ package dataClass;
 import com.google.gson.Gson;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
-import stepdefinitions.ProjectSteps;
+import stepdefinitions.AllApiSteps;
 import utilities.JsonUtils;
 import java.util.HashMap;
 
-public class TaskData {
+public class FirstProjectTaskData {
+
 
     public HashMap<String, Object> reqTestDataBody(){
 
@@ -19,11 +20,15 @@ public class TaskData {
 
         JsonArray projectsArray = jsonObject.getAsJsonObject("data").getAsJsonArray("projects");
 
-        String newProject = ProjectSteps.gid;
+        String firstProjectGid= null;
+
+        firstProjectGid =AllApiSteps.firstProjectGid;
+
+        String newProject =firstProjectGid;
 
         projectsArray.add(newProject);
 
-        jsonObject.getAsJsonObject("data").addProperty("name", ProjectSteps.newTaskName);
+        jsonObject.getAsJsonObject("data").addProperty("name", AllApiSteps.tasksName);
 
         String modifiedJson = gson.toJson(jsonObject);
 
@@ -34,4 +39,3 @@ public class TaskData {
     }
 
 }
-

@@ -8,12 +8,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features = {"src/test/resources/features/thirdProject.feature"},
         glue = {"stepdefinitions"},
-        plugin = {"html:target/cucumber-reports.html",
-                "json:target/json-reports/cucumber-json.json",
-                "junit:target/cucumber-xml.xml",
-                "pretty"
-        },
-        monochrome = true
+        plugin = {"pretty"}
+
 )
 public class ThirdProjectRunner {
 }

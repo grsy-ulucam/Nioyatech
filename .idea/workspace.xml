@@ -5,35 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b945a69b-11df-41e5-8029-4e85d6d7d11c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dataClass/ApiData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dataClass/ProjectData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/dataClass/TaskData.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/ProjectPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/runners/ApiRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/runners/FirstProjectRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/runners/SecondProjectRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/runners/ThirdProjectRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/AllApiSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/ProjectSteps.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/ConfigReader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/Driver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/JsonToJava.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/utilities/JsonUtils.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/api.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/firstProject.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/secondProject.feature" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/features/thirdProject.feature" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dataClass/FirstProjectTaskData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dataClass/FirstProjectTaskGidStorage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dataClass/ProjectGidStorage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dataClass/SecondProjectTaskData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dataClass/SecondProjectTaskGidStorage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dataClass/ThirdProjectTaskData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/dataClass/ThirdProjectTaskGidStorage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/dataClass/ApiData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dataClass/ApiProjectData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runners/ApiRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/ApiRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runners/FirstProjectRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/FirstProjectRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runners/SecondProjectRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/SecondProjectRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/runners/ThirdProjectRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/ThirdProjectRunner.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/AllApiSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/AllApiSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/ProjectSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/ProjectSteps.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/resources/features/api.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/api.feature" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +84,20 @@
       <recent name="utilities" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.FirstProjectRunner">
+  <component name="RunManager" selected="JUnit.ApiRunner">
+    <configuration name="test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="runners.test" />
+      <module name="Nioyatech" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="runners.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Feature: firstProject" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
       <option name="CUCUMBER_CORE_VERSION" value="5" />
       <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/firstProject.feature" />
@@ -104,33 +105,7 @@
       <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
       <module name="Nioyatech" />
       <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter" />
-      <shortenClasspath name="NONE" />
       <option name="SUGGESTED_NAME" value="Feature: firstProject" />
-      <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="io.cucumber.core.cli.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <extension name="software.aws.toolkits.jetbrains.core.execution.JavaAwsConnectionExtension">
-        <option name="credential" />
-        <option name="region" />
-        <option name="useCurrentConnection" value="false" />
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="Scenario: Creating All Projects" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java" temporary="true" nameIsGenerated="true">
-      <option name="CUCUMBER_CORE_VERSION" value="5" />
-      <option name="FILE_PATH" value="$PROJECT_DIR$/src/test/resources/features/api.feature" />
-      <option name="GLUE" value="stepdefinitions" />
-      <option name="MAIN_CLASS_NAME" value="io.cucumber.core.cli.Main" />
-      <module name="Nioyatech" />
-      <option name="NAME_FILTER" value="^Creating All Projects$" />
-      <option name="PROGRAM_PARAMETERS" value=" --plugin org.jetbrains.plugins.cucumber.java.run.CucumberJvm5SMFormatter --name &quot;^Creating All Projects$&quot;" />
-      <option name="SUGGESTED_NAME" value="Scenario: Creating All Projects" />
       <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
       <extension name="coverage">
         <pattern>
@@ -172,36 +147,35 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="test.test" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="FirstProjectTaskData" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Nioyatech" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="runners.*" />
+          <option name="PATTERN" value="dataClass.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="runners" />
-      <option name="MAIN_CLASS_NAME" value="runners.test" />
-      <option name="METHOD_NAME" value="test" />
-      <option name="TEST_OBJECT" value="method" />
+      <option name="PACKAGE_NAME" value="dataClass" />
+      <option name="MAIN_CLASS_NAME" value="dataClass.FirstProjectTaskData" />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <list>
+      <item itemvalue="Application.test" />
       <item itemvalue="Cucumber Java.Feature: firstProject" />
-      <item itemvalue="Cucumber Java.Scenario: Creating All Projects" />
+      <item itemvalue="JUnit.FirstProjectTaskData" />
       <item itemvalue="JUnit.ApiRunner" />
       <item itemvalue="JUnit.FirstProjectRunner" />
-      <item itemvalue="JUnit.test.test" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.ApiRunner" />
         <item itemvalue="JUnit.FirstProjectRunner" />
         <item itemvalue="Cucumber Java.Feature: firstProject" />
-        <item itemvalue="JUnit.ApiRunner" />
-        <item itemvalue="Cucumber Java.Scenario: Creating All Projects" />
-        <item itemvalue="JUnit.test.test" />
+        <item itemvalue="JUnit.FirstProjectTaskData" />
+        <item itemvalue="Application.test" />
       </list>
     </recent_temporary>
   </component>
@@ -217,7 +191,19 @@
       <option name="presentableId" value="Default" />
       <updated>1695339206128</updated>
     </task>
+    <task id="LOCAL-00001" summary="27.09.2023">
+      <created>1695794434566</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1695794434566</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="27.09.2023" />
+    <option name="LAST_COMMIT_MESSAGE" value="27.09.2023" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

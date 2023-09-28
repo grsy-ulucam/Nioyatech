@@ -1,7 +1,5 @@
 package stepdefinitions;
 
-import dataClass.ProjectData;
-import dataClass.TaskData;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -108,7 +106,7 @@ public class ProjectSteps {
         taskData = new TaskData();
         HashMap<String, Object> expectedDataAndReqBody = taskData.reqTestDataBody();
 
-        System.out.println(expectedDataAndReqBody);
+
 
         response = given().
 
@@ -118,6 +116,11 @@ public class ProjectSteps {
                 body(expectedDataAndReqBody).
                 when().
                 post("{taskPath}");
+
+        System.out.println("Response: ");
+
+        response.prettyPrint();
+
 
         jsonPath = response.jsonPath();
         taskGid = jsonPath.get("data.gid");
