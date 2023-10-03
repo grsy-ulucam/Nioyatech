@@ -10,9 +10,7 @@ import io.restassured.path.json.JsonPath;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import utilities.ConfigReader;
-
 import java.util.*;
-
 import static io.restassured.RestAssured.given;
 
 public class AllApiSteps {
@@ -31,7 +29,6 @@ public class AllApiSteps {
     public static String secondProjectFirstTaskGid;
     public static String secondProjectSecondTaskGid;
     public static String secondProjectThirdTaskGid;
-
     public static String thirdProjectFirstTaskGid;
     public static String thirdProjectSecondTaskGid;
     public static String thirdProjectThirdTaskGid;
@@ -98,7 +95,6 @@ public class AllApiSteps {
         } else {
             System.out.println("There are not enough projects in the list to access.");
         }
-
     }
 
     @Then("Verify all of created projects")
@@ -166,42 +162,51 @@ public class AllApiSteps {
 
     }
 
-    @Given("Set Base URLs with for deleting all task on First Project")
-    public void setBaseURLsWithForDeletingAllTaskOnFirstProject() {
+    @Given("Set Base URLs with for deleting first task on First Project")
+    public void setBaseURLsWithForDeletingFirstTaskOnFirstProject() {
 
-
-        String[] taskGids = {firstProjectFirstTaskGid, firstProjectSecondTaskGid, firstProjectThirdTaskGid};
-
-        for (String gid : taskGids) {
-            specification = new RequestSpecBuilder()
-                    .setBaseUri(ConfigReader.getProperty("baseURL"))
-                    .build();
-            specification.pathParams("taskPath", "tasks", "idPath", gid);
-        }
+        specification = new RequestSpecBuilder()
+                .setBaseUri(ConfigReader.getProperty("baseURL"))
+                .build();
+        specification.pathParams("taskPath", "tasks", "idPath", firstProjectFirstTaskGid);
 
     }
 
-    @When("Set send request for deleting all task on First Project")
-    public void setSendRequestForDeletingAllTaskOnFirstProject() {
+    @When("Set send request for deleting  task on First Project")
+    public void setSendRequestForDeletingFirstTaskOnFirstProject() {
         response = given().
-
                 spec(specification).
-
                 contentType(ContentType.JSON).
-
                 header("Authorization", ConfigReader.getProperty("token")).
-
                 when().
-
                 delete("{taskPath}/{idPath}");
-
     }
 
-    @Then("Verify deleted all of  on First Project")
-    public void verifyDeletedAllOfOnFirstProject() {
-
+    @Then("Verify deleted task on First Project")
+    public void verifyDeletedFirstOfOnFirstProject() {
         response.then().statusCode(200);
     }
+
+    @Given("Set Base URLs with for  deleting second task on First Project")
+    public void setBaseURLsWithForSecondDeletingSecondTaskOnFirstProject() {
+
+        specification = new RequestSpecBuilder()
+                .setBaseUri(ConfigReader.getProperty("baseURL"))
+                .build();
+        specification.pathParams("taskPath", "tasks", "idPath", firstProjectSecondTaskGid);
+
+    }
+
+    @Given("Set Base URLs with for  deleting third task on First Project")
+    public void setBaseURLsWithForDeletingThirdTaskOnFirstProject() {
+
+        specification = new RequestSpecBuilder()
+                .setBaseUri(ConfigReader.getProperty("baseURL"))
+                .build();
+        specification.pathParams("taskPath", "tasks", "idPath", firstProjectThirdTaskGid);
+
+    }
+
 
     @Given("Set Base URLs for creating all tasks for Second Project")
     public void setBaseURLsForCreatingAllTasksForSecondProject() {
@@ -210,9 +215,7 @@ public class AllApiSteps {
         specification = new RequestSpecBuilder().
                 setBaseUri(ConfigReader.getProperty("baseURL")).
                 build();
-
         specification.pathParam("taskPath", "tasks");
-
 
     }
 
@@ -254,7 +257,6 @@ public class AllApiSteps {
         } else {
             System.out.println("There are not enough projects in the list to access.");
         }
-
     }
 
     @Then("Verify all of created tasks for  Second Project")
@@ -263,42 +265,51 @@ public class AllApiSteps {
         response.then().assertThat().statusCode(201);
     }
 
-    @Given("Set Base URLs with for deleting all task on Second Project")
-    public void setBaseURLsWithForDeletingAllTaskOnSecondProject() {
+    @Given("Set Base URLs with for deleting first task on Second Project")
+    public void setBaseURLsWithForDeletingFirstTaskOnSecondProject() {
 
-        String[] taskGids = {secondProjectFirstTaskGid, secondProjectSecondTaskGid, secondProjectThirdTaskGid};
-
-        for (String gid : taskGids) {
-            specification = new RequestSpecBuilder()
-                    .setBaseUri(ConfigReader.getProperty("baseURL"))
-                    .build();
-            specification.pathParams("taskPath", "tasks", "idPath", gid);
-        }
-
+        specification = new RequestSpecBuilder()
+                .setBaseUri(ConfigReader.getProperty("baseURL"))
+                .build();
+        specification.pathParams("taskPath", "tasks", "idPath", secondProjectFirstTaskGid);
     }
 
-    @When("Set send request for deleting all task on Second Project")
-    public void setSendRequestForDeletingAllTaskOnSecondProject() {
+    @When("Set send request for deleting  task on Second Project")
+    public void setSendRequestForDeletingTaskOnSecondProject() {
 
         response = given().
-
                 spec(specification).
-
                 contentType(ContentType.JSON).
-
                 header("Authorization", ConfigReader.getProperty("token")).
-
                 when().
-
                 delete("{taskPath}/{idPath}");
 
     }
 
-
-    @Then("Verify deleted all of  on Second Project")
-    public void verifyDeletedAllOfOnSecondProject() {
+    @Then("Verify deleted task on Second Project")
+    public void verifyDeletedTaskOnSecondProject() {
 
         response.then().statusCode(200);
+
+    }
+
+    @Given("Set Base URLs with for  deleting second task on Second Project")
+    public void setBaseURLsWithForDeletingSecondTaskOnSecondProject() {
+
+        specification = new RequestSpecBuilder()
+                .setBaseUri(ConfigReader.getProperty("baseURL"))
+                .build();
+        specification.pathParams("taskPath", "tasks", "idPath", secondProjectSecondTaskGid);
+
+    }
+
+    @Given("Set Base URLs with for  deleting third task on Second Project")
+    public void setBaseURLsWithForDeletingThirdTaskOnSecondProject() {
+
+        specification = new RequestSpecBuilder()
+                .setBaseUri(ConfigReader.getProperty("baseURL"))
+                .build();
+        specification.pathParams("taskPath", "tasks", "idPath", secondProjectThirdTaskGid);
 
     }
 
@@ -308,7 +319,6 @@ public class AllApiSteps {
         specification = new RequestSpecBuilder().
                 setBaseUri(ConfigReader.getProperty("baseURL")).
                 build();
-
         specification.pathParam("taskPath", "tasks");
 
     }
@@ -320,7 +330,7 @@ public class AllApiSteps {
 
         thirdProjectTaskData = new ThirdProjectTaskData();
 
-        HashMap<String, Object> expectedDataAndReqBody =  thirdProjectTaskData.reqTestDataBody();
+        HashMap<String, Object> expectedDataAndReqBody = thirdProjectTaskData.reqTestDataBody();
 
         response = given().
                 spec(specification).
@@ -338,7 +348,7 @@ public class AllApiSteps {
 
         thirdProjectTaskGid = jsonPath.get("data.gid");
 
-        ThirdProjectTaskGidStorage thirdProjectTaskGidStorage=ThirdProjectTaskGidStorage.getInstance();
+        ThirdProjectTaskGidStorage thirdProjectTaskGidStorage = ThirdProjectTaskGidStorage.getInstance();
 
         thirdProjectTaskGidStorage.addTaskGid(thirdProjectTaskGid);
 
@@ -347,11 +357,10 @@ public class AllApiSteps {
         if (thirdProjectListTasks.size() >= 3) {
             thirdProjectFirstTaskGid = thirdProjectListTasks.get(0);
             thirdProjectSecondTaskGid = thirdProjectListTasks.get(1);
-            thirdProjectThirdTaskGid  =thirdProjectListTasks.get(2);
+            thirdProjectThirdTaskGid = thirdProjectListTasks.get(2);
         } else {
             System.out.println("There are not enough projects in the list to access.");
         }
-
 
     }
 
@@ -362,58 +371,61 @@ public class AllApiSteps {
 
     }
 
-
-    @Given("Set Base URLs with for deleting all task on Third Project")
-    public void setBaseURLsWithForDeletingAllTaskOnThirdProject() {
-        String[] taskGids = {thirdProjectFirstTaskGid, thirdProjectSecondTaskGid, thirdProjectThirdTaskGid};
-
-        for (String gid : taskGids) {
-            specification = new RequestSpecBuilder()
-                    .setBaseUri(ConfigReader.getProperty("baseURL"))
-                    .build();
-            specification.pathParams("taskPath", "tasks", "idPath", gid);
-        }
+    @Given("Set Base URLs with for deleting first task on Third Project")
+    public void setBaseURLsWithForDeletingFirstTaskOnThirdProject() {
+        specification = new RequestSpecBuilder()
+                .setBaseUri(ConfigReader.getProperty("baseURL"))
+                .build();
+        specification.pathParams("taskPath", "tasks", "idPath", thirdProjectFirstTaskGid);
     }
 
-    @When("Set send request for deleting all task on Third Project")
-    public void setSendRequestForDeletingAllTaskOnThirdProject() {
-
+    @When("Set send request for deleting  task on Third Project")
+    public void setSendRequestForDeletingTaskOnThirdProject() {
         response = given().
-
                 spec(specification).
-
                 contentType(ContentType.JSON).
-
                 header("Authorization", ConfigReader.getProperty("token")).
-
                 when().
-
                 delete("{taskPath}/{idPath}");
+    }
+
+    @Then("Verify deleted task on Third Project")
+    public void verifyDeletedTaskOnThirdProject() {
+
+        response.then().statusCode(200);
 
     }
 
-    @Then("Verify deleted all of  on Third Project")
-    public void verifyDeletedAllOfOnThirdProject() {
+    @Given("Set Base URLs with for  deleting second task on Third Project")
+    public void setBaseURLsWithForDeletingSecondTaskOnThirdProject() {
+        specification = new RequestSpecBuilder()
+                .setBaseUri(ConfigReader.getProperty("baseURL"))
+                .build();
+        specification.pathParams("taskPath", "tasks", "idPath", thirdProjectSecondTaskGid);
+    }
 
-        response.then().assertThat().statusCode(200);
+    @Given("Set Base URLs with for  deleting third task on Third Project")
+    public void setBaseURLsWithForDeletingThirdTaskOnThirdProject() {
+
+        specification = new RequestSpecBuilder()
+                .setBaseUri(ConfigReader.getProperty("baseURL"))
+                .build();
+        specification.pathParams("taskPath", "tasks", "idPath", thirdProjectThirdTaskGid);
 
     }
 
-    @Given("Set Base URLs  for deleting all of projects")
-    public void setBaseURLsForDeletingAllOfProjects() {
+    @Given("Set Base URLs  for deleting first project")
+    public void setBaseURLsForDeletingFirstProject() {
 
-        String[] taskGids = {firstProjectGid,secondProjectGid,thirdProjectGid};
+        specification = new RequestSpecBuilder()
+                .setBaseUri(ConfigReader.getProperty("baseURL"))
+                .build();
+        specification.pathParams("projectPath", "projects", "idPath", firstProjectGid);
 
-        for (String gid : taskGids) {
-            specification = new RequestSpecBuilder()
-                    .setBaseUri(ConfigReader.getProperty("baseURL"))
-                    .build();
-            specification.pathParams("projectPath", "projects", "idPath", gid);
-        }
     }
 
-    @When("Set send request for deleting all of projects")
-    public void setSendRequestForDeletingAllOfProjects() {
+    @When("Set send request for deleting project")
+    public void setSendRequestForDeletingProject() {
 
         response = given().
 
@@ -425,10 +437,31 @@ public class AllApiSteps {
 
     }
 
-    @Then("Verify deleted all of projects")
-    public void verifyDeletedAllOfProjects() {
+    @Then("Verify deleted the  project")
+    public void verifyDeletedTheProject() {
 
         response.then().assertThat().statusCode(200);
 
     }
+
+    @Given("Set Base URLs  for deleting second project")
+    public void setBaseURLsForDeletingSecondProject() {
+
+        specification = new RequestSpecBuilder()
+                .setBaseUri(ConfigReader.getProperty("baseURL"))
+                .build();
+        specification.pathParams("projectPath", "projects", "idPath", secondProjectGid);
+
+    }
+
+    @Given("Set Base URLs  for deleting third project")
+    public void setBaseURLsForDeletingThirdProject() {
+
+        specification = new RequestSpecBuilder()
+                .setBaseUri(ConfigReader.getProperty("baseURL"))
+                .build();
+        specification.pathParams("projectPath", "projects", "idPath", thirdProjectGid);
+
+    }
 }
+

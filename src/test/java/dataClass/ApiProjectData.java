@@ -8,7 +8,6 @@ import utilities.JsonUtils;
 import java.util.HashMap;
 
 public class ApiProjectData {
-
     public HashMap<String, Object> reqTestDataBodyForProjects(){
 
         String json = "{\n" +
@@ -45,11 +44,12 @@ public class ApiProjectData {
                 "}";
 
         Gson gson = new Gson();
+
         JsonObject jsonObject = gson.fromJson(json, JsonObject.class);
 
         jsonObject.getAsJsonObject("data").addProperty("name", AllApiSteps.projectName);
-        String modifiedJson = gson.toJson(jsonObject);
 
+        String modifiedJson = gson.toJson(jsonObject);
 
         HashMap<String,Object> expectedDataAndReqBody= JsonUtils.fromJson(modifiedJson, HashMap.class);
 

@@ -9,7 +9,6 @@ import java.util.HashMap;
 
 public class FirstProjectTaskData {
 
-
     public HashMap<String, Object> reqTestDataBody(){
 
         String jsonStr = "{\"data\":{\"projects\":[],\"workspace\":\"1205543498728328\",\"assignee\":\"1205543498728329\",\"notes\":\"crax\",\"name\":\"karya\"}}";
@@ -37,5 +36,4 @@ public class FirstProjectTaskData {
         return expectedDataAndReqBody;
 
     }
-
 }
