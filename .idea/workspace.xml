@@ -6,23 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="b945a69b-11df-41e5-8029-4e85d6d7d11c" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dataClass/ApiProjectData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dataClass/ApiProjectData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dataClass/FirstProjectTaskData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dataClass/FirstProjectTaskData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dataClass/FirstProjectTaskGidStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dataClass/FirstProjectTaskGidStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dataClass/ProjectGidStorage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dataClass/ProjectGidStorage.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/dataClass/SecondProjectTaskData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/dataClass/SecondProjectTaskData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pages/ProjectPage.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/runners/ApiRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/runners/ApiRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/FirstProjectRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/SecondProjectRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/runners/ThirdProjectRunner.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/AllApiSteps.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/stepdefinitions/AllApiSteps.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/stepdefinitions/ProjectSteps.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/api.feature" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/features/api.feature" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/firstProject.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/secondProject.feature" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/resources/features/thirdProject.feature" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,18 +48,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Acer/IdeaProjects/Nioyatech/src/test/java/stepdefinitions&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.tabs&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/Acer/IdeaProjects/Nioyatech/src/test/java/stepdefinitions",
+    "project.structure.last.edited": "Facets",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "editor.preferences.tabs"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="stepdefinitions" />
@@ -218,13 +202,21 @@
       <option name="project" value="LOCAL" />
       <updated>1695895974388</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="03.10.2023">
+      <created>1696333517389</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1696333517389</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="27.09.2023" />
     <MESSAGE value="28.09.2023" />
-    <option name="LAST_COMMIT_MESSAGE" value="28.09.2023" />
+    <MESSAGE value="03.10.2023" />
+    <option name="LAST_COMMIT_MESSAGE" value="03.10.2023" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

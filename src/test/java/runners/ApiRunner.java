@@ -10,8 +10,13 @@ import org.junit.runner.RunWith;
 
         features = {"src/test/resources/features/api.feature"},
         glue = {"stepdefinitions"},
-        monochrome = true,
+        plugin = {"html:target/cucumber-reports.html",
+                "json:target/json-reports/cucumber-json.json",
+                "junit:target/cucumber-xml.xml",
+                "pretty"},
+        dryRun = false,
         strict = true
+
 )
 public class ApiRunner {
 
